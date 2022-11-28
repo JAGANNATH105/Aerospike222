@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.Api'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'com.aerospike', name: 'spring-data-aerospike', version: '3.5.0'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	implementation("com.aerospike:aerospike-client:6.1.2")
+	implementation('com.aerospike:java-object-mapper:2.1.0')
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation("jakarta.annotation:jakarta.annotation-api")
+	implementation("com.aerospike:aerospike-client:6.1.2")
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'com.aerospike', name: 'spring-data-aerospike', version: '3.5.0'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
