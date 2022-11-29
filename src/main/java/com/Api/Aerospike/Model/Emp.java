@@ -5,7 +5,7 @@ import lombok.Data;
 import org.springframework.data.aerospike.mapping.Document;
 import org.springframework.data.annotation.Id;
 
-
+//kjhgfds
 @Document
 public class Emp {
     @Id
